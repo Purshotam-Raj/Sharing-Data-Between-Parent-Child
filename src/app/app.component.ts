@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Task';
+  
+  num : number =0;
+  inc(){this.changer(+1)}
+  dec(){this.changer(-1)}
+  reset(){
+    this.num=0;
+  }
+
+  changer(delta : number){
+    this.num = this.num+ delta;
+  }
+  constructor(){
+  }
+  ngOnInit(){
+  
+  }
 }
